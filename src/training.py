@@ -19,7 +19,8 @@ def cargar_process_data(path=process_data):
 def separar_datos(df):
     X = df.drop(["Diagnosis"], axis=1)
     y = df["Diagnosis"]
-    return train_test_split(X, y, test_size=0.20, random_state=11)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=11)
+    return X_train, X_test, y_train, y_test
 
 """Guarda los CSV de train y test."""
 
@@ -52,12 +53,12 @@ def entrenar_modelo(X_train, y_train):
         n_jobs=-1)
 
     gs_rf.fit(X_train, y_train)
-
-    # modelo final
-    return gs_rf.best_estimator_
+    modelo_final = gs_rf.best_estimator_
+    
+    return modelo_final
 
 """Guarda el modelo con pickle."""
 
-def guardar_modelo(model, path=modelo):
+def guardar_modelo(modelo, path=modelo):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    pickle.dump(model, open(path, "wb"))
+    pickle.dump(modelo, open(path, "wb"))

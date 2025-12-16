@@ -10,14 +10,10 @@ st.set_page_config(
     page_icon="🧠",
     layout="centered"
 )
-
 # ---------------- CARGA MODELO ----------------
-@st.cache_resource
-def load_model():
-    return pickle.load(open(MODEL_PATH, "rb"))
-
-model = load_model()
-
+with open(MODEL_PATH, "rb") as f:
+    model = pickle.load(f)
+    
 # ---------------- INTERFAZ ----------------
 st.title("🧠 Predicción de Alzheimer")
 st.write(
@@ -26,7 +22,11 @@ st.write(
     El modelo utilizado es un **Random Forest**, seleccionado por su alto recall y estabilidad.
     """
 )
-
+# ---------------- IMAGEN PRINCIPAL ----------------
+st.image(
+    "img/alzheimers1.jpg",
+    use_container_width=True
+)
 st.divider()
 
 # ---------------- INPUTS ----------------

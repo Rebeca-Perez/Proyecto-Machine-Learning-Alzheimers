@@ -12,6 +12,7 @@ Se ha diseñado siguiendo una estructura modular mediante scripts en la carpeta 
 Proyecto-Machine-Learning-Alzheimers/
 
 app_streamlit/
+    img/ # imagen utilizada en streamlit
     app.py #
     requirements.txt # 
 
@@ -49,6 +50,7 @@ src/
     data_processing.py # Procesado y limpieza de datos
     training.py # División train/test y entrenamiento de modelos
     evaluation.py # Evaluación del modelo final
+    main.py # ejecución de los .py anteriores
 
 README.md # Este archivo
 
@@ -63,7 +65,7 @@ Este script:
 
 ## 2. `training.py` — Entrenamiento del Modelo
 
-Este script realiza:
+Este script:
 
 Carga de datos limpios
 
@@ -104,29 +106,23 @@ Classification Report
 AUC (si el modelo tiene predict_proba)
 
 Ejecución
-python src/evaluation.py
+python src/main.py
 
 Para evaluar otro modelo basta con cambiar esta línea:
 modelo = "../models/otro_modelo.pkl"
 
 📌 Modelos Adicionales
 
-Aunque el modelo principal se ejecuta desde training.py,
+Aunque el modelo principal se ejecuta desde main.py,
 el proyecto incluye notebooks adicionales donde se entrenan otros modelos como:
 
-Logistic Regression
-
-DecisionTree
-
-Gradient Boosting
-
-Kmeans
-
-RandomForest
-
-Redes Neuronales
-
-SVM
+- Logistic Regression
+- DecisionTree
+- Gradient Boosting
+- Kmeans
+- RandomForest
+- Redes Neuronales
+- SVM
 
 Cada uno se guarda también en la carpeta models/
 

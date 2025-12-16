@@ -11,7 +11,7 @@ def cargar_raw_data(path=raw_data):
 
 """Limpieza de datos antes de entrenar al modelo."""
 
-def process_data(df):
+def datos_procesados(df):
     df = df.drop([
         "DoctorInCharge", "PatientID", "CholesterolTotal", "Age", "Smoking",
         "AlcoholConsumption", "PhysicalActivity", "DietQuality", "Depression",

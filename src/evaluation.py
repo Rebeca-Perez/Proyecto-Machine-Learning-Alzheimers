@@ -21,16 +21,17 @@ def cargar_test_data(path=test_data):
 """Carga el modelo desde pickle."""
 
 def cargar_modelo(path=modelo):
-    return pickle.load(open(path, "rb"))
+    modelo_final = pickle.load(open(path, "rb"))
+    return modelo_final
 
 """Evalúa el modelo y genera métricas."""
 
-def evaluate(model, X_test, y_test):
-    pred = model.predict(X_test)
+def evaluate(modelo, X_test, y_test):
+    pred = modelo.predict(X_test)
 
     # Intentar AUC (no todos los modelos tienen predict_proba)
     try:
-        scores = model.predict_proba(X_test)[:, 1]
+        scores = modelo.predict_proba(X_test)[:, 1]
         auc = roc_auc_score(y_test, scores)
     except:
         auc = "Modelo sin predict_proba"
