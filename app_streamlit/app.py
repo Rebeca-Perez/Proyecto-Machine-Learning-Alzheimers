@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 
 # ---------------- CONFIG ----------------
-MODEL_PATH = "../models/06_modelo_RandomForest.pkl"
+MODEL_PATH = "../models/modelo_final/06_modelo_RandomForest.pkl"
 
 st.set_page_config(
     page_title="Predicción de Alzheimer",

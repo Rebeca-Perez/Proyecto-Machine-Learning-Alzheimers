@@ -28,3 +28,4 @@ def datos_procesados(df):
 def guardar_processed_data(df, path=process_data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     df.to_csv(path, index=False)
+print("Guardado")

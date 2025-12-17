@@ -7,7 +7,7 @@ test_data = "../data/test/test.csv"
 """Ruta del modelo elegido, en este caso el Random Forest.
     Se puede cambiar la ruta para probar otros modelos"""
 
-modelo = "../models/06_modelo_RandomForest.pkl"
+modelo = "../models/modelo_final/06_modelo_RandomForest.pkl"
 
 
 """Carga los datos de test."""
@@ -43,3 +43,5 @@ def evaluate(modelo, X_test, y_test):
         "confusion_matrix": confusion_matrix(y_test, pred).tolist(),
         "classification_report": classification_report(y_test, pred)}
     return metrics
+
+print("Finalizado")

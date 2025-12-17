@@ -25,12 +25,13 @@ data/
 docs/
     img/ # imagen utilizada para la memoria
     Memoria.ipynb # Archivo con la memoria del proyecto
-    Presentacion_DS.pdf # Presentación del proyecto para Ciencia de Datos
+    Presentacion_técnica.pdf # Presentación del proyecto para Ciencia de Datos
     Presentacion_negocio.pdf # Presentación del proyecto enfocado a negocio
     
 models/
-    n_modelos # Modelos entrenados guardados en pickle
+    modelos_probados/ # Modelos entrenados guardados en pickle
     modelo_final/ # Modelo elegido, entrenado y guardado en pickle
+    model_config.yaml # librerías utilizadas y parámetros del modelo elegido
 
 notebooks/
     01_Fuentes # Archivo jupyter con los datos iniciales

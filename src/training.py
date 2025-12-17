@@ -7,7 +7,7 @@ import pickle
 process_data = "../data/processed/datos_limpios.csv"
 train_data = "../data/train/train.csv"
 test_data = "../data/test/test.csv"
-modelo = "../models/06_modelo_RandomForest.pkl"
+modelo = "../models/modelo_final/06_modelo_RandomForest.pkl"
 
 """Carga de los datos limpios."""
 
@@ -62,3 +62,4 @@ def entrenar_modelo(X_train, y_train):
 def guardar_modelo(modelo, path=modelo):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     pickle.dump(modelo, open(path, "wb"))
+print("Entrenado y guardado")
