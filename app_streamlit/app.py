@@ -24,21 +24,21 @@ st.write(
 )
 # ---------------- IMAGEN PRINCIPAL ----------------
 st.image(
-    "img/alzheimers1.jpg",
+    "img/alzheimers.webp",
     use_container_width=True
 )
 st.divider()
 
 # ---------------- INPUTS ----------------
 mmse = st.slider(
-    "MMSE – Mini-Mental State Examination",
+    "MMSE – Deterioro cognitivo",
     min_value=0.0,
     max_value=30.0,
     value=15.0
 )
 
 functional = st.slider(
-    "Functional Assessment",
+    "Evaluación Funcional",
     min_value=0.0,
     max_value=10.0,
     value=5.0
