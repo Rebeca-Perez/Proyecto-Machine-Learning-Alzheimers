@@ -19,7 +19,6 @@ st.title("🧠 Predicción de Alzheimer")
 st.write(
     """
     Aplicación web para estimar el **riesgo de Alzheimer** a partir de variables clínicas.
-    El modelo utilizado es un **Random Forest**, seleccionado por su alto recall y estabilidad.
     """
 )
 # ---------------- IMAGEN PRINCIPAL ----------------
